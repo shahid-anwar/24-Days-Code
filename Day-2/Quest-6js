@@ -1,0 +1,18 @@
+// Swapping of two numbers without 3rd variable
+// Step-1: Add the two numbers and store in the first variable.
+// Step-2: Subtract the second variable from first variable and store it in the second variable.
+// Step-3: Subtract the second variable from first variable and store it in the first variable.
+// Example: a=a+b=10+15=25
+//          b=a-b=25-15=10
+//          a=a-b=25-10=15
+//          a=15, b=10
+function swap(num1,num2)
+{
+    num1=num1+num2;
+    console.log(num1)
+    num2=num1-num2;
+    console.log(num2)
+    num1=num1-num2
+    return {num1,num2}
+}
+console.log(swap(100,150))
