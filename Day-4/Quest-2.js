@@ -1,0 +1,1 @@
+// To find longest common string from array of strings
