@@ -1,7 +1,5 @@
 // Find all possible pairs from a number array which some is zero.
 
-
-
 // Algorithm 
 // Step-1: Take an object to check num and array to push result.
 // Step-2: Loop from starting to the length of array.

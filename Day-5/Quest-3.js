@@ -1,25 +1,29 @@
-// To find the largest pair of the 2 elements using indexing with unsorted elements
+// Find all possible pairs from a number array which some is zero.
 
-/*
-Algorithm
-Step-1: Intialize an array with the inital elements as the largest Pair
-Step-2: Now take two loop an outer and an inner 
-Step-3: Now check if the elements in the variable initialized is greater than or not.
-Step-4: If its greater than the intialized elements then it add to an array and return 
-*/
+// Algorithm 
+// Step-1: Take an object to check num and array to push result.
+// Step-2: Loop from starting to the length of array.
+// Step-3: Now check if the negative value of the number exists or not if it not exist then assign it in object.
+// Step-4: Else push it in the array.
 
-function findLargestPair(arr)
+function allPairs(arr)
 {
-    let largestPair=[arr[0],arr[1]]
+    let obj={};
+    let result=[];
     for(let i=0;i<arr.length;i++)
     {
-        for(let j=i+1;j<arr.length;j++)
+        let num=arr[i];
+        if(obj[-num])
         {
-            if(arr[i]+arr[j] > largestPair[0]+largestPair[1])
-            largestPair=[arr[i],arr[j]]
+            result.push(-num,num)
+        }
+        else if(obj[num]===undefined)
+        {
+            obj[num]=true;
         }
     }
-    return largestPair
+    return result;
 }
-const arr=[2,22,3,6,8,9]
-console.log(findLargestPair(arr));
+
+
+console.log(allPairs([12, 23, -12, 3, -13, -3,13])); // Output: [[-3, 3], [-13, 13]]
